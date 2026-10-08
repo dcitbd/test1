@@ -1,0 +1,1 @@
+export function renderProductList() { return "<div>Product List</div>"; }
