@@ -1,0 +1,81 @@
+dreamcartbd/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml              # CI/CD Deployment
+├── apps-script/                    # গুগল শীট ব্যাকএন্ড ইঞ্জিন
+│   ├── Code.js                     # মাস্টার API গেটওয়ে (Site -> Sheet)
+│   ├── Database.js                 # ডাটাবেজ স্কিমা ও ব্যাচ লকিং
+│   ├── SheetTriggers.js            # অন-এডিট ট্রিগার ইঞ্জিন (Sheet -> Site)
+│   ├── appsscript.json             # গুগল অ্যাপস স্ক্রিপ্ট কনফিগ
+│   └── AuthService.js
+├── src/
+│   ├── admin/
+│   │   │   Catalog
+│   │   │   ├── CatagoryManager.js
+│   │   │   ├── ImageUploader.js
+│   │   │   ├── ProductList.js
+│   │   │   └──  VariantGenerator.js
+│   │   ├── inventory
+│   │   │   ├── LowStockAlarts.js
+│   │   │   ├── PurchaseOrders.js
+│   │   │   ├── StockLedger.js
+│   │   │   ├── StockMovements.js
+│   │   │   └── SupplierManager.js
+│   │   ├── orders
+│   │   │   ├── BulkShipment.js
+│   │   │   ├── CourierHub.js
+│   │   │   ├── OrderDetails.js
+│   │   │   ├── OrderList.js
+│   │   │   ├── Payments.js
+│   │   │   └── ReturnRTO.js
+│   │   └── system
+│   │       ├── AuditTrail.js
+│   │       ├── BackupCenter.js
+│   │       ├── BulkExcelTool.js
+│   │       ├── Reports.js
+│   │       └── Settings.js
+│   ├── api/                        # API SDK ও সিঙ্ক ইঞ্জিন
+│   │   ├── client.js               # সেন্ট্রাল API ক্লায়েন্ট
+│   │   ├── products.js             # প্রোডাক্ট ও ইনলাইন এডিটর API
+│   │   ├── orders.js               # অর্ডার ও ফ্রড চেক API
+│   │   └── sync.js                 # টু-ওয়ে সিঙ্ক স্টেট ম্যানেজার
+│   ├── components/                 # রিইউজেবল UI কম্পোনেন্টস
+│   │   ├── HomePage.js
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   ├── Sidebar.js
+│   │   ├── FraudModal.js
+│   │   ├── InlineEditor.js
+│   │   ├── CartDrawer.js
+│   │   └── Toast.js
+│   ├── js/
+│   │   ├── router.js
+│   │   └── store.js
+│   ├── pages/                      # ৫০+ পেজের মডিউল
+│   │   ├── storefront/             # কাস্টমার পেজসমূহ (Home, Product, Cart, Checkout)
+│   │   │   ├── CategoryPage.js
+│   │   │   ├── CheckoutPage.js
+│   │   │   ├── HomePage.js
+│   │   │   ├── OrderSuccessPage.js
+│   │   │   ├── ProductDetailPage.js
+│   │   │   ├── ProductListPage.js
+│   │   │   └── TrackOrderPage.js
+│   │   ├── partner/                # সেলার, রিসেলার ও হোলসেলার পোর্টাল
+│   │   │   ├── ResallerPortal.js
+│   │   │   ├── SellerPortal.js
+│   │   │   └── WholeSalePortal.js
+│   │   └── customer/               # কাস্টমার ড্যাশবোর্ড ও ট্র্যাকিং
+│   │       └── CustomerPortal.js
+│   ├── styles/
+│   │   └── main.css                # আধুনিক ডিজাইন সিস্টেম ও Tailwind কনফিগ
+│   └── main.js                     # অ্যাপ্লিকেশনের মেইন এন্ট্রি পয়েন্ট
+├── .env
+├── .env.example
+├── CNAME
+├── README.md
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── vite.config.js
+└── favicon.ico

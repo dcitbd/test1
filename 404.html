@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting — Dream Cart BD</title>
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+      sessionStorage.setItem('dcbd_spa_redirect', path + search + hash);
+      
+      var segments = path.split('/').filter(Boolean);
+      var root = '/';
+      if (window.location.hostname.includes('github.io') && segments.length > 0) {
+        var known = ['products', 'shop', 'product', 'cart', 'favourite', 'wishlist', 'checkout', 'order', 'order-success', 'track', 'tracking', 'contact', 'offers', 'categories', 'brands', 'others-market', 'chat', 'live-chat', 'landing', 'terms', 'privacy', 'customer', 'reseller', 'wholesaler', 'admin'];
+        if (!known.includes(segments[0].toLowerCase())) {
+          root = '/' + segments[0] + '/';
+        }
+      }
+      window.location.replace(root);
+    })();
+  </script>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #f8fafc; color: #0f172a;">
+  <div style="width: 48px; height: 48px; border-radius: 12px; background: #059669; color: white; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 20px; margin-bottom: 12px;">
+    DC
+  </div>
+  <h3 style="font-size: 16px; margin: 0 0 6px 0;">Dream Cart BD</h3>
+  <p style="font-size: 13px; color: #64748b; margin: 0;">পৃষ্ঠাটি লোড হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন...</p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Dream Cart BD — Smart Digital Commerce & Multi-Vendor Platform</title>
+  
+  <meta name="description" content="Bangladesh's premier high-reliability smart commerce platform: Smartwatches, organic health supplements, tactical lighting, and kitchen safety gas accessories." />
+  <meta property="og:title" content="Dream Cart BD — Smart Digital Commerce" />
+  <meta property="og:description" content="Multi-Vendor E-Commerce Platform powered by Google Sheets & Google Apps Script API Gateway." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Dynamic Base Path Calculation for Universal Hosting (GitHub Pages, Cloudflare Pages, C-Panel) -->
+  <script>
+    (function() {
+      var currentPath = window.location.pathname;
+      var base = '/';
+      if (window.location.hostname.includes('github.io')) {
+        var segments = currentPath.split('/').filter(Boolean);
+        var knownRoutes = [
+          'products', 'shop', 'product', 'cart', 'favourite', 'wishlist',
+          'checkout', 'order', 'order-success', 'track', 'tracking', 'contact', 'offers',
+          'categories', 'brands', 'others-market', 'chat', 'live-chat',
+          'landing', 'terms', 'privacy', 'customer', 'reseller', 'wholesaler', 'admin'
+        ];
+        if (segments.length > 0 && !knownRoutes.includes(segments[0].toLowerCase())) {
+          base = '/' + segments[0] + '/';
+        }
+      }
+      window.__APP_BASE__ = base === '/' ? '' : base.replace(/\/$/, '');
+      var baseTag = document.createElement('base');
+      baseTag.href = base;
+      document.head.insertBefore(baseTag, document.head.firstChild);
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Standalone Production CSS -->
+  <!-- Tailwind CSS CDN for instant production rendering -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="src/styles/main.css" />
+  <link rel="stylesheet" href="src/styles/admin.css" />
+  <link rel="stylesheet" href="src/styles/responsive.css" />
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen antialiased selection:bg-emerald-500 selection:text-white">
+  
+  <!-- Main App Root Mount Point with instant preloader -->
+  <div id="app-root">
+    <div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc;">
+      <div style="width: 50px; height: 50px; border-radius: 14px; background: linear-gradient(135deg, #10b981, #059669); display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 22px; box-shadow: 0 10px 25px rgba(5,150,105,0.3); margin-bottom: 16px;">
+        DC
+      </div>
+      <h2 style="font-size: 20px; font-weight: 800; color: #0f172a; margin: 0;">Dream Cart BD</h2>
+      <p style="font-size: 13px; color: #64748b; margin-top: 6px;">Loading platform and live catalog...</p>
+    </div>
+  </div>
+
+  <!-- Main ES Module Bootstrapper with Base-Resolved Path -->
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
